@@ -33,6 +33,8 @@
 #define    RX_ENTRY_SIZE        (sizeof(rfc_dataEntryGeneral_t) + RX_MSG_SIZE)
 
 uint8_t                g_rx_buffer[RX_MSG_COUNT * RX_ENTRY_SIZE];
+dataQueue_t            g_data_queue;
+uint8_t*               g_rx_entry;
 rfc_propRxOutput_t     g_rx_stats;
 
 volatile static phy_rx_handler g_rx_handler;
