@@ -16,7 +16,7 @@
  */
 int main(void)
 {
-	SetupTrimDevice();
+    SetupTrimDevice();
     PRCMPowerDomainOn(PRCM_DOMAIN_PERIPH | PRCM_DOMAIN_SERIAL);
     while(PRCMPowerDomainStatus(PRCM_DOMAIN_PERIPH | PRCM_DOMAIN_SERIAL) != PRCM_DOMAIN_POWER_ON){}
     // Enable clock for GPIO / UART
@@ -27,5 +27,5 @@ int main(void)
     PHY_open(); // Open radio in RX mode
     example_handler();
     PHY_close();// Close radio
-	return 0;
+    return 0;
 }

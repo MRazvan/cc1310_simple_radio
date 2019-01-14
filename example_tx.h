@@ -123,7 +123,7 @@ void example_handler(){
     while(true){
         if (g_total_ticks - lastTick > 999){
             uint8_t totalChars = simple_sprintf((char*)&g_printf_buffer[0], "Total Ticks : %d. Temp : %d Deg C.", g_total_ticks, AONBatMonTemperatureGetDegC());
-        	PHY_send(&g_printf_buffer[0], totalChars);
+            PHY_send(&g_printf_buffer[0], totalChars);
             GPIO_toggleDio(LED_GREEN);
             lastTick = g_total_ticks;
         }

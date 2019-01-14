@@ -34,7 +34,7 @@ void rx_handler(rfc_dataEntryGeneral_t* dataEntry, rfc_propRxOutput_t* stats){
         UARTCharPut(UART_DEV, data->payload[idx++]);
     UARTCharPut(UART_DEV, '\r');
     UARTCharPut(UART_DEV, '\n');
-	GPIO_toggleDio(LED_RED);
+    GPIO_toggleDio(LED_RED);
 }
 
 void example_handler(){
